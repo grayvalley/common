@@ -15,6 +15,10 @@
  */
 #ifndef COMMON_STRINGVIEW_HH
 #define COMMON_STRINGVIEW_HH
+
+#include <vector>
+#include <cstdint>
+
 namespace GVT {
     class StringView {
     public:
@@ -29,4 +33,24 @@ namespace GVT {
         static StringView from(const std::vector<uint8_t>& data);
     };
 }
+namespace GVT {
+    StringView::StringView(const char* base, size_t len) : base{base}, len{len}{
+    }
+}
+
+namespace GVT {
+    StringView StringView::from(const std::string &str) {
+        return StringView{str.c_str(), strlen(str.c_str())};
+    }
+}
+
+namespace GVT {
+    StringView StringView::from(const std::vector<uint8_t> &data) {
+        return StringView {
+                reinterpret_cast<const char*>(&data[0]),
+                data.size()
+        };
+    }
+}
+
 #endif //COMMON_STRINGVIEW_HH
