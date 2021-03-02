@@ -13,4 +13,6 @@ add_library(common INTERFACE)
 # are creating an INTERFACE library.
 target_include_directories(common INTERFACE inc/)
 
-add_subdirectory(tests)
+if(NOT common_POPULATED)
+    add_subdirectory(tests)
+endif()
