@@ -19,11 +19,16 @@
 #include <vector>
 #include <cstdint>
 
+#include <grayvalley/common/Macros.hh>
+
 namespace GVT {
     class StringView {
     public:
         const char* base = nullptr;
         size_t len = 0;
+    public:
+        PREVENT_COPY(StringView);
+        PREVENT_MOVE(StringView);
     public:
         StringView() = default;
     public:

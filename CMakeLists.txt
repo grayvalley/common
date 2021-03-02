@@ -13,11 +13,6 @@ if(NOT TARGET common)
     # will inherit our library's include directory. This is extremely convenient and is the main reason we
     # are creating an INTERFACE library.
     target_include_directories(common INTERFACE inc/)
-else()
-    message("${PROJECT_NAME}: common was already defined.")
-endif()
-
-if(NOT TARGET common)
     add_subdirectory(tests)
 else()
     message("${PROJECT_NAME}: common was already defined.")
