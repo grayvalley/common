@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(common)
 
 set(CMAKE_CXX_STANDARD 17)
-
+set(ALLOW_DUPLICATE_CUSTOM_TARGETS TRUE)
 
 # By specifying INTERFACE as the second parameter to add_library, we are no longer allowed to provide source files
 # since the library is not meant to generate any build output.
