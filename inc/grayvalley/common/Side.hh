@@ -18,7 +18,8 @@
 namespace GVT {
     enum class SIDE {
         B,
-        S
+        S,
+        None
     };
 }
 #endif //COMMON_SIDE_HH
