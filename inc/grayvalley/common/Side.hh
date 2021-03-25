@@ -17,8 +17,8 @@
 #define COMMON_SIDE_HH
 namespace GVT {
     enum class SIDE {
-        B,
-        S,
+        Buy,
+        Sell,
         None
     };
 }
