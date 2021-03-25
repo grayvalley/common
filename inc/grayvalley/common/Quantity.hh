@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <stdexcept>
 
-namespace GVT::OrderEntry {
+namespace GVT {
     struct Quantity {
         const int64_t value;
         explicit Quantity(int64_t value): value{value}{
