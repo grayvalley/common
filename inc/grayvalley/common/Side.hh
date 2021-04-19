@@ -14,7 +14,7 @@
 #ifndef COMMON_SIDE_HH
 #define COMMON_SIDE_HH
 namespace GVT {
-    enum class SIDE {
+    enum class Side {
         Buy,
         Sell,
         None
