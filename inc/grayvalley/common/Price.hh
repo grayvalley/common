@@ -23,7 +23,16 @@ namespace GVT {
                 throw std::runtime_error("Price cannot be negative.");
             }
         };
+        bool operator==(const Price &other) const { return value == other.value; }
     };
 }
-
+namespace std {
+    template <>
+    struct hash<GVT::Price> {
+        size_t operator () (const GVT::Price &s) const {
+            using std::hash;
+            return hash<int64_t>()(s.value);
+        }
+    };
+}
 #endif //COMMON_PRICE_HH
