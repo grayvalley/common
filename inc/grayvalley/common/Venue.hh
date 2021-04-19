@@ -15,14 +15,15 @@
 #define COMMON_VENUE_HH
 #include <string>
 #include <stdexcept>
+#include <utility>
 namespace GVT {
     class VenueID {
     public:
-        std::string value;
+        int64_t value;
     public:
-        explicit VenueID(const std::string& venueID): value{venueID}{
-            if (venueID.empty()){
-                throw std::runtime_error("OrderID invalid.");
+        VenueID(int64_t venueID): value{std::move(venueID)}{
+            if (venueID < 0){
+                throw std::runtime_error("VenueID invalid.");
             }
         };
     };
