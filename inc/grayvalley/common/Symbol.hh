@@ -18,13 +18,23 @@
 namespace GVT {
     class Symbol {
     public:
-        std::string value;
+        int64_t value;
     public:
-        explicit Symbol(const std::string& symbol): value{symbol}{
-            if (symbol.empty()){
-                throw std::runtime_error("OrderID invalid.");
+        explicit Symbol(int64_t symbol): value{symbol}{
+            if (symbol < 0) {
+                throw std::runtime_error("Symbol invalid.");
             }
         };
+        bool operator==(const Symbol &other) const { return value == other.value; }
+    };
+}
+namespace std {
+    template <>
+    struct hash<GVT::Symbol> {
+        size_t operator () (const GVT::Symbol &s) const {
+            using std::hash;
+            return hash<int64_t>()(s.value);
+        }
     };
 }
 #endif //COMMON_VENUE_HH
