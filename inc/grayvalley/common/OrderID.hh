@@ -19,7 +19,7 @@
 
 class OrderID {
 public:
-    const std::string value;
+    std::string value;
 public:
     explicit OrderID(const std::string& orderID): value{orderID}{
         if (orderID.empty()){

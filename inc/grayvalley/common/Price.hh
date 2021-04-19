@@ -19,7 +19,7 @@
 
 namespace GVT {
     struct Price {
-        const int64_t value;
+        int64_t value;
         explicit Price(int64_t value): value{value}{
             if (value < 0){
                 throw std::runtime_error("Price cannot be negative.");

@@ -19,7 +19,7 @@
 
 namespace GVT {
     struct Quantity {
-        const int64_t value;
+        int64_t value;
         explicit Quantity(int64_t value): value{value}{
             if (value < 0){
                 throw std::runtime_error("Quantity cannot be negative.");
