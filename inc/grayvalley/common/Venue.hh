@@ -11,19 +11,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_QUANTITY_HH
-#define COMMON_QUANTITY_HH
-#include <cstdint>
+#ifndef COMMON_VENUE_HH
+#define COMMON_VENUE_HH
+#include <string>
 #include <stdexcept>
 namespace GVT {
-    struct Quantity {
-        int64_t value;
-        explicit Quantity(int64_t value): value{value}{
-            if (value < 0){
-                throw std::runtime_error("Quantity cannot be negative.");
+    class VenueID {
+    public:
+        std::string value;
+    public:
+        explicit VenueID(const std::string& venueID): value{venueID}{
+            if (venueID.empty()){
+                throw std::runtime_error("OrderID invalid.");
             }
         };
     };
 }
-
-#endif //COMMON_QUANTITY_HH
+#endif //COMMON_VENUE_HH
