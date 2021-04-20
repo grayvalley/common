@@ -11,14 +11,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_ORDERID_HH
-#define COMMON_ORDERID_HH
+#ifndef COMMON_EXECINST_HH
+#define COMMON_EXECINST_HH
 #include <string>
 #include <stdexcept>
 namespace GVT {
-    class OrderID {
+    class ExecInst {
     public:
         std::string value;
+    public:
+        explicit ExecInst(const std::string& exec): value{exec}{
+            if (value.empty()){
+                throw std::runtime_error("ExecInst invalid.");
+            }
+        };
     };
 }
-#endif //AMM_ORDERID_HH
+#endif //COMMON_EXECINST_HH
