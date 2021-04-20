@@ -15,17 +15,21 @@
 #define COMMON_VENUE_HH
 #include <string>
 #include <stdexcept>
-#include <utility>
 namespace GVT {
     class VenueID {
     public:
-        int64_t value;
-    public:
-        VenueID(int64_t venueID): value{std::move(venueID)}{
-            if (venueID < 0){
-                throw std::runtime_error("VenueID invalid.");
-            }
-        };
+        int value;
+        bool operator==(const VenueID &other) const { return value == other.value; }
+    };
+}
+
+namespace std {
+    template <>
+    struct hash<GVT::VenueID> {
+        size_t operator () (const GVT::VenueID &s) const {
+            using std::hash;
+            return hash<int>()(s.value);
+        }
     };
 }
 #endif //COMMON_VENUE_HH
