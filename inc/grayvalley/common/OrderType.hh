@@ -11,14 +11,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_ORDERID_HH
-#define COMMON_ORDERID_HH
-#include <string>
+#ifndef COMMON_ORDER_TYPE_HH
+#define COMMON_ORDER_TYPE_HH
 #include <stdexcept>
 namespace GVT {
-    class OrderID {
+    class OrderType {
     public:
         std::string value;
+    public:
+        explicit OrderType(const std::string& type): value{type}{
+            if (type.empty()){
+                throw std::runtime_error("OrderType invalid.");
+            }
+        };
     };
 }
-#endif //AMM_ORDERID_HH
+
+#endif //COMMON_VENUE_HH
