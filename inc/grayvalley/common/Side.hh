@@ -11,14 +11,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_SIDE_HH
-#define COMMON_SIDE_HH
+#ifndef GVT_COMMON_SIDE_HH
+#define GVT_COMMON_SIDE_HH
 namespace GVT {
     enum class Side {
+        None,
         Buy,
-        Sell,
-        None
+        Sell
     };
 
 }
-#endif //COMMON_SIDE_HH
+#endif //GVT_COMMON_SIDE_HH

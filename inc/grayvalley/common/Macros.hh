@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_MACROS_HH
-#define COMMON_MACROS_HH
+#ifndef GVT_COMMON_MACROS_HH
+#define GVT_COMMON_MACROS_HH
 
 #define DELETE_DEFAULT_CTOR(class_name) class_name() = delete;
 
@@ -21,4 +21,4 @@
 
 #define PREVENT_MOVE(class_name) class_name(const class_name&&) = delete;\
                                  class_name& operator=(const class_name&&) = delete
-#endif //COMMON_MACROS_HH
+#endif //GVT_COMMON_MACROS_HH

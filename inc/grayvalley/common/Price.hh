@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_PRICE_HH
-#define COMMON_PRICE_HH
+#ifndef GVT_COMMON_PRICE_HH
+#define GVT_COMMON_PRICE_HH
 #include <cstdint>
 #include <stdexcept>
 namespace GVT {
@@ -35,4 +35,4 @@ namespace std {
         }
     };
 }
-#endif //COMMON_PRICE_HH
+#endif //GVT_COMMON_PRICE_HH
