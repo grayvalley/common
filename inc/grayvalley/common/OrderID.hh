@@ -19,6 +19,18 @@ namespace GVT {
     class OrderID {
     public:
         std::string value;
+
+        bool operator==(const OrderID &other) const { return value == other.value; }
+    };
+}
+
+namespace std {
+    template <>
+    struct hash<GVT::OrderID> {
+        size_t operator () (const GVT::OrderID &s) const {
+            using std::hash;
+            return hash<std::string>()(s.value);
+        }
     };
 }
 #endif //AMM_ORDERID_HH

@@ -19,5 +19,6 @@ namespace GVT {
         Sell,
         None
     };
+
 }
 #endif //COMMON_SIDE_HH

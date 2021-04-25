@@ -18,7 +18,7 @@
 namespace GVT {
     class VenueID {
     public:
-        int value;
+        std::string value;
         bool operator==(const VenueID &other) const { return value == other.value; }
     };
 }
@@ -28,7 +28,7 @@ namespace std {
     struct hash<GVT::VenueID> {
         size_t operator () (const GVT::VenueID &s) const {
             using std::hash;
-            return hash<int>()(s.value);
+            return hash<std::string>()(s.value);
         }
     };
 }
