@@ -17,7 +17,8 @@ namespace GVT {
     enum class OrderStatus {
         None,
         Accepted,
-        Canceled
+        Canceled,
+        Filled
     };
 }
 

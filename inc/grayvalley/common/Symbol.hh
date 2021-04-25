@@ -18,10 +18,10 @@
 namespace GVT {
     class Symbol {
     public:
-        int64_t value;
+        std::string value;
     public:
-        explicit Symbol(int64_t symbol): value{symbol}{
-            if (symbol < 0) {
+        explicit Symbol(const std::string& symbol): value{symbol}{
+            if (symbol.empty()) {
                 throw std::runtime_error("Symbol invalid.");
             }
         };
@@ -33,7 +33,7 @@ namespace std {
     struct hash<GVT::Symbol> {
         size_t operator () (const GVT::Symbol &s) const {
             using std::hash;
-            return hash<int64_t>()(s.value);
+            return hash<std::string>()(s.value);
         }
     };
 }
