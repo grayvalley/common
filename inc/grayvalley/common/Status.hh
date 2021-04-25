@@ -16,7 +16,12 @@
 namespace GVT {
     enum class OrderStatus {
         None,
-        Accepted,
+        QueuedForInsert,
+        QueuedForCancel,
+        AckedForInsert,
+        AckedForCancel,
+        Rejected,
+        Alive,
         Canceled,
         Filled
     };
