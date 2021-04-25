@@ -14,8 +14,7 @@
 #ifndef COMMON_STRINGVIEW_HH
 #define COMMON_STRINGVIEW_HH
 
-#include <vector>
-#include <cstdint>
+#include <cstring>
 
 #include <grayvalley/common/Macros.hh>
 
