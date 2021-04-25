@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_QUANTITY_HH
-#define COMMON_QUANTITY_HH
+#ifndef GVT_COMMON_QUANTITY_HH
+#define GVT_COMMON_QUANTITY_HH
 #include <cstdint>
 #include <stdexcept>
 namespace GVT {
@@ -26,4 +26,4 @@ namespace GVT {
     };
 }
 
-#endif //COMMON_QUANTITY_HH
+#endif //GVT_COMMON_QUANTITY_HH

@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_STATUS_HH
-#define COMMON_STATUS_HH
+#ifndef GVT_COMMON_STATUS_HH
+#define GVT_COMMON_STATUS_HH
 namespace GVT {
     enum class OrderStatus {
         None,

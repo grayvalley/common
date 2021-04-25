@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_ORDERID_HH
-#define COMMON_ORDERID_HH
+#ifndef GVT_COMMON_ORDERID_HH
+#define GVT_COMMON_ORDERID_HH
 #include <string>
 #include <stdexcept>
 namespace GVT {
@@ -33,4 +33,4 @@ namespace std {
         }
     };
 }
-#endif //AMM_ORDERID_HH
+#endif //GVT_COMMON_ORDERID_HH

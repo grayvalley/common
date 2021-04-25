@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_VENUE_HH
-#define COMMON_VENUE_HH
+#ifndef GVT_COMMON_VENUE_HH
+#define GVT_COMMON_VENUE_HH
 #include <string>
 #include <stdexcept>
 namespace GVT {
@@ -32,4 +32,4 @@ namespace std {
         }
     };
 }
-#endif //COMMON_VENUE_HH
+#endif //GVT_COMMON_VENUE_HH

@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_EXECINST_HH
-#define COMMON_EXECINST_HH
+#ifndef GVT_COMMON_EXECINST_HH
+#define GVT_COMMON_EXECINST_HH
 #include <string>
 #include <stdexcept>
 namespace GVT {
@@ -27,4 +27,4 @@ namespace GVT {
         };
     };
 }
-#endif //COMMON_EXECINST_HH
+#endif //GVT_COMMON_EXECINST_HH

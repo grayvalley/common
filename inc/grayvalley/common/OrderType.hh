@@ -11,8 +11,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef COMMON_ORDER_TYPE_HH
-#define COMMON_ORDER_TYPE_HH
+#ifndef GVT_COMMON_ORDER_TYPE_HH
+#define GVT_COMMON_ORDER_TYPE_HH
 #include <stdexcept>
 namespace GVT {
     class OrderType {
@@ -27,4 +27,4 @@ namespace GVT {
     };
 }
 
-#endif //COMMON_VENUE_HH
+#endif //GVT_COMMON_ORDER_TYPE_HH
