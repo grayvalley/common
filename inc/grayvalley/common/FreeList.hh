@@ -14,9 +14,9 @@
 #ifndef GVT_COMMON_FREELIST_HH
 #define GVT_COMMON_FREELIST_HH
 
-#include <unordered_map>
-#include <variant>
-#include <functional>
+#include <cstdint>
+#include <tuple>
+#include <vector>
 
 template<typename T>
 struct FreeList {
