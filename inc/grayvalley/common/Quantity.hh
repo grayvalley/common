@@ -23,6 +23,12 @@ namespace GVT {
                 throw std::runtime_error("Quantity cannot be negative.");
             }
         };
+        void set(int64_t new_value){
+            value = new_value;
+        }
+        void set(const Quantity& qty){
+            value = qty.value;
+        }
     };
 }
 
