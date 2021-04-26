@@ -23,6 +23,7 @@ namespace GVT {
         Rejected,
         Alive,
         Canceled,
+        PartiallyFilled,
         Filled
     };
 }
