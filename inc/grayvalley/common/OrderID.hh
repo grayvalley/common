@@ -20,6 +20,9 @@ namespace GVT {
     public:
         std::string value;
 
+        OrderID() = default;
+        OrderID(const OrderID& other) = default;
+
         bool operator==(const OrderID &other) const { return value == other.value; }
     };
 }
