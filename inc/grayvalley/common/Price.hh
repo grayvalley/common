@@ -27,6 +27,7 @@ namespace GVT {
             }
         };
         bool operator==(const Price &other) const { return value == other.value; }
+        bool operator <(const Price &other) const { return value < other.value; }
     };
 }
 namespace std {

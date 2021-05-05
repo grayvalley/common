@@ -30,6 +30,10 @@ namespace GVT {
         void set(const Quantity& qty){
             value = qty.value;
         }
+
+        bool operator==(const Quantity &other) const { return value == other.value; }
+        bool operator <(const Quantity &other) const { return value < other.value; }
+
     };
 }
 
