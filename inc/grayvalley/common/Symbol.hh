@@ -20,6 +20,9 @@ namespace GVT {
     public:
         std::string value;
     public:
+
+        Symbol() = default;
+
         explicit Symbol(const std::string& symbol): value{symbol}{
             if (symbol.empty()) {
                 throw std::runtime_error("Symbol invalid.");
