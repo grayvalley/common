@@ -13,18 +13,21 @@
  */
 #ifndef GVT_COMMON_ORDER_TYPE_HH
 #define GVT_COMMON_ORDER_TYPE_HH
-#include <stdexcept>
+
 namespace GVT {
-    class OrderType {
-    public:
-        std::string value;
-    public:
-        explicit OrderType(const std::string& type): value{type}{
-            if (type.empty()){
-                throw std::runtime_error("OrderType invalid.");
-            }
-        };
+    enum class OrderAction {
+        Insert,
+        Delete,
+        Modify
     };
+}
+
+namespace GVT {
+   enum class OrderType {
+       PostOnlyLimit,
+       Limit,
+       Market
+   };
 }
 
 #endif //GVT_COMMON_ORDER_TYPE_HH

@@ -19,6 +19,17 @@ namespace GVT {
     class VenueID {
     public:
         std::string value;
+    public:
+        explicit VenueID(const std::string& venue): value{venue} {
+            if (venue.empty()){
+                throw std::runtime_error("Value cannot be empty.");
+            }
+        };
+
+        VenueID(const VenueID& other) {
+            value = other.value;
+        }
+
         bool operator==(const VenueID &other) const { return value == other.value; }
     };
 }
