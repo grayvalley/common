@@ -21,4 +21,5 @@ namespace GVT {
     };
 
 }
+
 #endif //GVT_COMMON_SIDE_HH
