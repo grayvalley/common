@@ -27,7 +27,16 @@ namespace GVT {
             }
         };
         bool operator==(const Price &other) const { return value == other.value; }
-        bool operator <(const Price &other) const { return value < other.value; }
+        bool operator< (const Price &other) const { return value < other.value; }
+        bool operator> (const Price &other) const { return value > other.value; }
+        bool operator<=(const Price &other) const { return value <= other.value; }
+        bool operator>=(const Price &other) const { return value >= other.value; }
+        friend GVT::Price operator-(const Price& lhs, const Price& rhs){
+            return GVT::Price {lhs.value - rhs.value};
+        }
+        friend GVT::Price operator+(const Price& lhs, const Price& rhs){
+            return GVT::Price {lhs.value + rhs.value};
+        }
     };
 }
 namespace std {

@@ -21,7 +21,7 @@ namespace GVT {
         AckedForInsert,
         AckedForCancel,
         Rejected,
-        Alive,
+        Accepted,
         Canceled,
         PartiallyFilled,
         Filled
