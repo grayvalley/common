@@ -64,9 +64,9 @@ namespace GVT {
         return out;
     }
 
-    int64_t s_prc_to_i64_prc(const std::string& value){
-        std::string s_prc = rmcomma(value);
-        return std::stol(s_prc);
+    int64_t dbl_prc_to_i64_prc(const double value, int decimals){
+        auto result = std::round(value * GVT::powers_of_10[decimals]);
+        return result;
     }
 
     int64_t dtoi64(double value, int decimals){
