@@ -27,6 +27,7 @@ namespace GVT {
             }
         };
         bool operator==(const Price &other) const { return value == other.value; }
+        bool operator!=(const Price &other) const { return value != other.value; }
         bool operator< (const Price &other) const { return value < other.value; }
         bool operator> (const Price &other) const { return value > other.value; }
         bool operator<=(const Price &other) const { return value <= other.value; }
@@ -48,4 +49,38 @@ namespace std {
         }
     };
 }
+
+namespace GVT {
+
+    int powers_of_10[5] = {
+            1, 10, 100, 1000, 10000
+    };
+
+    std::string rmcomma(const std::string& src){
+        std::string out(src.size(), '0');
+        out.erase(std::remove_copy(
+                src.begin(), src.end(), out.begin(),
+                '.'), out.end());
+        return out;
+    }
+
+    int64_t s_prc_to_i64_prc(const std::string& value){
+        std::string s_prc = rmcomma(value);
+        return std::stol(s_prc);
+    }
+
+    int64_t dtoi64(double value, int decimals){
+        value *= powers_of_10[decimals];
+        return static_cast<int64_t>(value);
+    }
+
+    double i64tod(int64_t value, int decimals){
+        double dbl_value = value / (double)powers_of_10[decimals];
+        return static_cast<double>(dbl_value);
+    }
+
+
+
+}
+
 #endif //GVT_COMMON_PRICE_HH
