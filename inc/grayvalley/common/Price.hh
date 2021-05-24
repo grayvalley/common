@@ -14,6 +14,7 @@
 #ifndef GVT_COMMON_PRICE_HH
 #define GVT_COMMON_PRICE_HH
 #include <cstdint>
+#include <cmath>
 #include <stdexcept>
 namespace GVT {
     struct Price {
