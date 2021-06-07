@@ -37,6 +37,7 @@ namespace GVT {
         bool operator!=(const int64_t rhs) const { return value != rhs; }
         void operator+=(const Quantity &other) { value += other.value; }
         bool operator <(const Quantity &other) const { return value < other.value; }
+        bool operator >(const Quantity &other) const { return value > other.value; }
         friend GVT::Quantity operator-(const Quantity& lhs, const Quantity& rhs){
             return GVT::Quantity {lhs.value - rhs.value};
         }
