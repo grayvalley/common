@@ -20,7 +20,7 @@ namespace GVT {
     public:
         std::string value;
     public:
-        explicit VenueID(const std::string& venue): value{venue} {
+        explicit VenueID(std::string venue): value{venue} {
             if (venue.empty()){
                 throw std::runtime_error("Value cannot be empty.");
             }
